@@ -1,5 +1,5 @@
 # Big-Data-Course
-Team name: "18-22"
+Team name: "18-22"\
 Authors:
 - Mykhailo Buleshnyi
 - Maksym Buleshnyi

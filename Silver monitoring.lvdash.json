@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "name": "5b465b00",
+      "displayName": "monitoring",
+      "queryLines": [
+        "SELECT * FROM catalog_cp.silver.monitoring"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "eb9aca40",
+      "displayName": "table",
+      "layout": [
+        {
+          "widget": {
+            "name": "2ed7c870",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5b465b00",
+                  "fields": [
+                    {
+                      "name": "table_name",
+                      "expression": "`table_name`"
+                    },
+                    {
+                      "name": "check_date",
+                      "expression": "`check_date`"
+                    },
+                    {
+                      "name": "value",
+                      "expression": "`value`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "check_date",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "value",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "num of rows"
+                  }
+                },
+                "color": {
+                  "fieldName": "table_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Number of colums per table"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 4,
+            "height": 10
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "9feef40e",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "b0ee6240",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}

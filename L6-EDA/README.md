@@ -30,19 +30,19 @@ First of all columns with no variability (e.g., the `bathrooms` column, entirely
 
 A bar chart of missing value percentages per column (filtered to columns with missing data) offers a straightforward overview of data completeness. Columns are ordered by descending missingness, focusing attention on problematic fields. This summary informs whether to exclude certain features or apply imputation.
 
-![Screenshot 2025-10-22 at 02.36.51.png](./Screenshot 2025-10-22 at 02.36.51.png "Screenshot 2025-10-22 at 02.36.51.png")
+![Screenshot 2025-10-22 at 02.36.51.png](./missingness_by_columns.png)
 
 ### 3.2 Grouped Missingness by Property Type
 
 By segmenting missingness according to the `property_type` categorical variable, it is possible to detect whether specific types of properties have more missing data in particular columns. We chose to create this bar plot because our preliminary data analysis revealed that the extent of missing data varies significantly across different Property Types. 
 
-![Screenshot 2025-10-22 at 02.36.14.png](./Screenshot 2025-10-22 at 02.36.14.png "Screenshot 2025-10-22 at 02.36.14.png")
+![Screenshot 2025-10-22 at 02.36.14.png](./group_pattern.png)
 
 ### 3.3 Correlation of Missingness Across Columns
 
 Missingness indicators (1 if data present, 0 if missing) were created for each column. Pairwise Pearson correlation coefficients between these indicators reveal columns whose missingness co-occurs frequently. This insight is critical when deciding on imputation strategies that handle multiple columns simultaneously.
 
-![Correlation vizualization](./photo_2025-10-22_00-28-36.jpg)
+![Correlation vizualization](./correlation.jpg)
 
 ### 3.4 Price Format Pattern Analysis
 
@@ -56,7 +56,7 @@ Visualization of pattern frequencies confirmed that price data is consistently r
 
 This easially allows to show how can we parse those results. If all results are consistent having the same pattern it can be easily parsed and
 
-![Screenshot 2025-10-22 at 02.35.15.png](./Screenshot 2025-10-22 at 02.35.15.png "Screenshot 2025-10-22 at 02.35.15.png")
+![Screenshot 2025-10-22 at 02.36.14.png](./price_pattern.png)
 
 
 ## 4. Limitations and Considerations

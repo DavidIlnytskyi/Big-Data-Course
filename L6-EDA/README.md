@@ -31,5 +31,6 @@ This approach makes patterns of dependent missingness immediately visible.
 - Airbnb dataset may have uneven missingness, making some columns dominate visually; subsetting columns improves readability.
 
 ### Visualization
+![Correlation vizualization](./photo_2025-10-22_00-28-36.jpg)
 
 
